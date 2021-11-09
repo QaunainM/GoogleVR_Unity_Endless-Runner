@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Bike
   - FinishLine
+  - Road
   layers:
   - Default
   - TransparentFX

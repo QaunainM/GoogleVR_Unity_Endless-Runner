@@ -9,8 +9,7 @@ public class RoadManager : MonoBehaviour
     public Player player;
     public float roadSize;      // Length (Z) of each road
 
-    public float playerOffset = 18f;    // Distance calculator 
-
+    public float playerOffset = 20f;    // Distance calculator of the player to the road end of the road 
  
     // Update is called once per frame
     void Update()

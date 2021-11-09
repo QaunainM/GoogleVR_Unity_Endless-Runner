@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     public GameObject enemyPrefab;
     public Player player;
 
-    private float enemyPointer;
+    private float enemyPointer;     // Calculator for distance of player to enemy
     public float spawnDistanceFromPlayer = 20f;
     public float spawnDistanceFromEnemy = 5f;
 
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour {
 
 
         if (isGamerOver == false) {
-            uiText.text = "Time: " + Mathf.FloorToInt(gameTimer) + "   Score:" + player.score  +  "   Speed: " + Mathf.Floor(player.speed) ;
+            uiText.text = "Time: " + Mathf.FloorToInt(gameTimer) + "   Score: " + player.score  +  "   Speed: " + Mathf.Floor(player.speed) ;
             // UI Text to display when the player is running (Time, score and speed)
             if (player.reachedFinishLine == true) { // Change Boolean when player hits finish line and save the final time and score
                 isGamerOver = true;

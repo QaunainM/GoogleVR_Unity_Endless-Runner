@@ -49,24 +49,24 @@ public class Player : MonoBehaviour
 
 
         // Make bike jump 
-        if (Input.GetButtonDown("Fire1"))  {
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("space"))   {
             bike.GetComponent<Rigidbody>().AddForce(transform.up * 1000f);
             speed -= deceleration;  // Decelerate upon each jump
         }
 
 
         // Make bike stay inside the road
-        if (bike.transform.position.x < -4.5f) {
+        if (bike.transform.position.x < -4.5f) {   // Left Edge
             bike.transform.position = new Vector3(bike.transform.position.x + 2f, bike.transform.position.y + 2, transform.position.z + 4.5f);
-        } else if (bike.transform.position.x > 4.5f) {
+        } else if (bike.transform.position.x > 4.5f) {   // Right Edge
             bike.transform.position = new Vector3(bike.transform.position.x - 2f, bike.transform.position.y + 2, transform.position.z + 4.5f);
         }
 
 
         //Stop the bike from going too far infront or behind of the VR camera
-        if (bike.transform.position.z > this.transform.position.z + 12f) {
+        if (bike.transform.position.z > this.transform.position.z + 12f) {  // If infront of VR Camera
             bike.transform.position = new Vector3(bike.transform.position.x, bike.transform.position.y, transform.position.z + 11.9f);
-        } else  if (bike.transform.position.z < this.transform.position.z - 2f) {
+        } else  if (bike.transform.position.z < this.transform.position.z - 2f) {  // If behind the VR Camera
             bike.transform.position = new Vector3(bike.transform.position.x, bike.transform.position.y, transform.position.z + 1f);
         }
 
