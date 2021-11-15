@@ -1504,8 +1504,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.36, y: 16.51, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.36, y: 19.7, z: 1}
+  m_Center: {x: 0, y: 6.1, z: 0}
 --- !u!23 &1351938549
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1604,7 +1604,7 @@ MonoBehaviour:
   uiText: {fileID: 1612427262}
   gameTimer: 0
   finishLine: {fileID: 0}
-  finishLinePosition: 200
+  finishLinePosition: 300
 --- !u!4 &1428591851
 Transform:
   m_ObjectHideFlags: 0
